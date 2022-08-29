@@ -1,0 +1,34 @@
+{%load static%}
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{%static 'css/unifiedUI.css'%}"
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <div class="header-box">Login Result</div>
+    <div class="login-dialog-box">
+        {%if state == "error-username"%}
+            <h1>Sorry</h1>
+            <div class="description-content">
+                It seems that you're not a membership of FLYingTeam Studio yet... Why not register one?<br>
+                <a href="http://127.0.0.1:8000/login" class="link">Back to login.</a>
+            </div>
+        {%elif state == "error-passwd"%}
+            <h1>Sorry</h1>
+            <div class="description-content">
+                You've entered a wrong password for your account.<br>
+                <a href="http://127.0.0.1:8000/login" class="link">Back to login.</a>
+            </div>
+        {%else%}
+            <h1>Success!</h1>
+            <div class="description-content">
+                Welcome back! {{username}}<br>
+                <a href="http://127.0.0.1:8000/login" class="link">Back to login.</a><br>
+                {%if username == "admin"%}
+                    <a href="http://127.0.0.1:8000/adminProcontrol" class="link">Open Admin Procontrol-></a>
+                {%endif%}
+            </div>
+        {%endif%}
+    </div>
+</body>

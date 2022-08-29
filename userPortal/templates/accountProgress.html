@@ -1,0 +1,40 @@
+{%load static%}
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{%static 'css/unifiedUI.css'%}">
+<head>
+    <title>User Progress - {{username}}</title>
+</head>
+<body>
+    <div class="header-box">User Progress - {{username}}</div>
+    <div class="login-dialog-box">
+        {%if type == "delete"%}
+            <h1>Warning</h1>
+            <div class="description-content">You are going to delete this account, and this is NOT reversable. Are you sure you want to continue?</div>
+            <span class="red-button">
+                <a href="http://127.0.0.1:8000/adminProcontrol/accountProgress/progressResult?username={{username}}&type=delete" class="button-link">Yes</a>
+            </span>
+            <span class="blue-button">
+                <a href="http://127.0.0.1:8000/adminProcontrol/" class="button-link">No</a>
+            </span>
+        {%elif type == "modify"%}
+            <h1>Modify User Account Information</h1>
+            <div class="description-content">
+                Modify the user's information provided by the form below.<br>
+                <strong>It will be invalid for admin to modify it's name</strong>
+            </div>
+            <form action="http://127.0.0.1:8000/adminProcontrol/accountProgress/progressResult/" method="POST">
+                {% csrf_token %}
+                <div class="input-area-description">Origin Username (DO NOT MODIFY)</div>
+                <input type="text" name="origin_username" value="{{username}}" class="input-area">
+                <div class="input-area-description">New username</div>
+                <input type="text" name="username" value="{{username}}" class="input-area">
+                <div class="input-area-description">Password</div>
+                <input type="password" name="passwd" class="input-area">
+                <input type="submit" value="Modify" class="submit">
+            </form>
+            
+        {%endif%}
+    </div>
+</body>

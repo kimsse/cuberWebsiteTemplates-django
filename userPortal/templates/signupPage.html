@@ -1,0 +1,27 @@
+{%load static%}
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{%static 'css/unifiedUI.css'%}">
+<head>
+    <title>Portal Login - Sign Up</title>
+</head>
+<body>
+    <div class="header-box">Sign Up</div>
+    <div class="login-dialog-box">
+        <h1>Sign Up for this portal</h1>
+        <div class="description-content">
+            You can sign up a new account for this portal by filling up all the following information below.
+        </div>
+        <form method="POST" action="http://127.0.0.1:8000/signup/result">
+
+            {% csrf_token %}
+
+            <div class="input-area-description">Your Username</div>
+            <input type="text" name="username" class="input-area">
+            <div class="input-area-description">Password</div>
+            <input type="password" name="passwd" class="input-area">
+            <input type="submit" value="Sign Up" class="submit">
+        </form>
+    </div>
+</body>

@@ -1,0 +1,110 @@
+body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(207, 233, 255);
+}
+.content-body{
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255,255,255);
+}
+.header-box{
+    padding: 18px;
+    background-color:rgb(0, 101, 189);
+    height: fit-content;
+    width: auto;
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.content-box{
+    background-color: rgb(207, 233, 255);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+.content-box:hover{
+    background-color: rgb(154, 208, 255);
+}
+.login-dialog-box{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: white;
+    height: fit-content;
+    width: 500px;
+    border-radius: 7.5px;
+    padding: 10px;
+    margin: 10%, 50%, 50%;
+    text-align: center;
+}
+h1{
+    color: dodgerblue;
+}
+h2{
+    color:rgb(0, 74, 139)
+}
+form{
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.description-content{
+    width: auto;
+    margin:5px;
+}
+.input-area-description{
+    color: dodgerblue;
+    font-size: smaller;
+    margin: auto;
+    width: 400px;
+    text-align:left;
+}
+.input-area{
+    margin: 5px;
+    width: 400px;
+    height: 25px;
+    border-color:dodgerblue;
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+}
+
+.submit{
+    border-radius: 7.5px;
+    background-color: dodgerblue;
+    border-style: none;
+    color: white;
+    height: 35px;
+    width: 250px;
+}
+.link{
+    color: dodgerblue;
+}
+.blue-button{
+    background-color: dodgerblue;
+    margin: 5px;
+    padding: 5px;
+    width: 50px;
+    height: fit-content;
+}
+.red-button{
+    background-color: red;
+    margin: 5px;
+    padding: 5px;
+    width: 50px;
+    height: fit-content;
+}
+.button-link{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}

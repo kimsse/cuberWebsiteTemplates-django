@@ -1,0 +1,26 @@
+{%load static%}
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{%static 'css/unifiedUI.css'%}">
+<head>
+    <title>Sign Up - Result</title>
+</head>
+<body>
+    <div class="header-box">Sign Up - Result</div>
+    <div class="login-dialog-box">
+        {%if state == "success"%}
+        <h1>Success!</h1>
+        <div class="description-content">
+            You may back to login page and login your account now.<br>
+            <a href="http://127.0.0.1:8000/login" class="link">Back to login</a>
+        </div>
+        {%else%}
+        <h1>Failed</h1>
+        <div class="description-content">
+            It seems that your username has been occupied, change another one.<br>
+            <a href="http://127.0.0.1:8000/signin" class="link">Back to sign up</a>
+        </div>
+        {%endif%}
+    </div>
+</body>

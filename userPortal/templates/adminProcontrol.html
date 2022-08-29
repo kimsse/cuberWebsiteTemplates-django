@@ -1,0 +1,37 @@
+{%load static%}
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{%static 'css/unifiedUI.css'%}">
+<head>
+    <title>Admin Procontrol</title>
+</head>
+<body style="background-color: white;">
+    <div class="content-body">
+        <div class="header-box">Admin Procontrol</div>
+        <div class="content-box">
+            <h1>Information for this portal</h1>
+            Version: v0.1.0 Beta<br>
+            Owner: (Unknown)<br>
+            ©️Copyright 2017-2022 by kimsse.<br>
+        </div>
+        <div class="content-box">
+            If you want to exit. Directly close this tab or move backward.<br>
+            <a href="http://127.0.0.1:8000/signup" class="link">Add a new user</a>
+        </div>
+        {%for i in user_data%}
+            {%if i.username == "admin"%}
+                <div class="content-box">
+                    <h2>{{i.username}}</h2>
+                    <a href="http://127.0.0.1:8000/adminProcontrol/accountProgress?username={{i.username}}&type=modify" class="link">Modify user info</a>
+                </div>
+            {%else%}
+                <div class="content-box">
+                    <h2>{{i.username}}</h2>
+                    <a href="http://127.0.0.1:8000/adminProcontrol/accountProgress?username={{i.username}}&type=modify" class="link">Modify user info</a>
+                    <a href="http://127.0.0.1:8000/adminProcontrol/accountProgress?username={{i.username}}&type=delete" class="link">Delete user info</a>
+                </div>
+            {%endif%}
+        {%endfor%}
+    </div>
+</body>

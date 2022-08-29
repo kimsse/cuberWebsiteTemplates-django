@@ -1,0 +1,27 @@
+{%load static%}
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="{%static 'css/unifiedUI.css'%}">
+<head>
+    <title>Result</title>
+</head>
+<body>
+    <div class="header-box">Result</div>
+    <div class="login-dialog-box">
+        {%if state == "success"%}
+            <h1>Progress Success!</h1>
+            <div class="description-content">
+                Your progress for this user has done successfully!<br>
+                <a href="http://127.0.0.1:8000/login">Return to login screen-></a>
+            </div>
+        {%else%}
+            <h1>Progress Failed!</h1>
+            <div class="description-content">
+                There is a problem while processing your request. Please try again later.<br>
+                {{state}}<br>
+                <a href="http://127.0.0.1:8000/login">Return to login screen-></a>
+            </div>
+        {%endif%}
+    </div>
+</body>
