@@ -9,12 +9,19 @@
 <body style="background-color: white;">
     <div class="content-body">
         <div class="header-box">Admin Procontrol</div>
-        <div class="content-box">
-            <h1>Information for this portal</h1>
-            Version: v0.1.0 Beta<br>
-            Owner: (Unknown)<br>
-            ©️Copyright 2017-2022 by kimsse.<br>
+
+        <h1>Server information</h1>
+        <strong>These are the information for this portal:</strong><br>
+        <strong>Server Name (Portal Name): </strong>{{server_name}}<br>
+        <strong>Owner of this copy: </strong>{{server_owner}}<br>
+        <strong>Portal Version: </strong>{{server_version}}<br>
+        <a href="http://127.0.0.1:8000/adminProcontrol/serverInfo" class="link">Modify Initial Server Information</a>
+        <div class="gray-text">
+            This is an opensource project written by kimsse. (Community Edition DOES NOT include a data encoder or decoder.)<br>
+            ©️Copyright 2022 by kimsse. Opensource on Github.
         </div>
+        <hr>
+        <h1>User Management</h1>
         <div class="content-box">
             If you want to exit. Directly close this tab or move backward.<br>
             <a href="http://127.0.0.1:8000/signup" class="link">Add a new user</a>
@@ -33,5 +40,6 @@
                 </div>
             {%endif%}
         {%endfor%}
+        
     </div>
 </body>

@@ -36,8 +36,14 @@ def adminProcontrol(respond):
     with open("./userPortal/static/json/userinfo.json", "r") as json_file:
         user_data:list = json.load(json_file)
         
+    with open("./userPortal/static/json/serverinfo.json", "r") as json_file:
+        server_info:dict = json.load(json_file)
+        
+    server_name = server_info["server_name"]
+    server_owner = server_info["server_owner"]
+    server_version = server_info["server_version"]
     
-    return render(respond, "adminProcontrol.html", {"user_data":user_data})
+    return render(respond, "adminProcontrol.html", {"user_data":user_data, "server_name":server_name, "server_owner": server_owner, "server_version":server_version})
 
 def accountProgress(respond):
     target_user = respond.GET.get("username")

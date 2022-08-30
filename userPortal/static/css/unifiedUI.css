@@ -4,7 +4,7 @@ body{
     background-color: rgb(207, 233, 255);
 }
 .content-body{
-    margin: 0px;
+    margin: 5px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(255,255,255);
 }
@@ -107,4 +107,8 @@ form{
     color: white;
     font-weight: bold;
     text-decoration: none;
+}
+.gray-text{
+    color: gray;
+    font-size: smaller;
 }
